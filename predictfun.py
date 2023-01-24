@@ -31,9 +31,63 @@ elif dis == 6:
 
     #checking for ingredients in question
 #conditions
+fish = [Sablefish
+Salmon,Sardines ,Scallop,Scorpion Fish,Sea Trout,Shad 
+Shark
+Shrimp
+Snapper
+Sole
+Spanish Mackerel
+Squid 
+calamari 
+Swordfish
+Tilapia
+Tilefish 
+Tuna 
+Walleye 
+Weakfish
+White Croaker 
+Whitefish
+Whiting
+Anchovy
+Bass 
+Bluefish
+Buffalo Fish
+Butterfish
+Carp
+Catfish 
+Chilean sea bass
+Clam
+Cod
+Crab 
+Crayfish 
+Croaker 
+Flounder
+Golden Snapper
+Grouper
+Haddock
+Hake
+Halibut
+Herring 
+Jack 
+Jacksmelt
+King Mackerel
+Lobster 
+Mackerel 
+Mahi Mahi 
+Marlin
+Mullet
+Orange Roughy
+Oysters 
+Perch 
+Pickerel
+Plaice
+Pollock
+Pompano 
+Rainbow Trout]
 
 if ingiq == 1:
-    ingcon = "Fat < 54 and Carbs < 59"
+    ingcon = "\" + 
 if ingiq == 2:
     ingcon = "Carbs < 59"
 if ingiq == 3:
@@ -51,12 +105,3 @@ set = df.query(condition)
 l = list(set["Recipe_name"])
 ans = l[random.randint(0, len(l))]
 print(ans)
-
-"""
-Meat (chicken pork mutton fish beef lamb) 
-Rice high carbs
-Milk high fat
-Sugar high carbs
-Wheat high carbs
-Soy high protein
-"""
