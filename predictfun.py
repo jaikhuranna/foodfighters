@@ -1,14 +1,14 @@
 import pandas as pd
 ds = pd.read_csv('/home/jaikhurana/Documents/Projects/foodfighters/Model/Dataset/dummydataset.csv')
 
-
 ingiq = input("Enter the Ingredient in question: ")
 dis = int(input("1. obesity \n2. diabetes \n3. cardiovascular disease \n4. cancer \n5. dental disease \n6. osteoporosis\nYour answer: "))
 valid = (1,2,3,4,5,6)
 
 if dis not in valid:
     print("ERROR: invalid response")
-print(ds)
+
+df.query('Length > 7 and Width < 8')
 
 """
 obesity- Low fat(33g-50g), low carbs(20g-57g)
