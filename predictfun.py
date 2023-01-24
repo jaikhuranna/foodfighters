@@ -31,60 +31,7 @@ elif dis == 6:
 
     #checking for ingredients in question
 #conditions
-fish = [Sablefish
-Salmon,Sardines ,Scallop,Scorpion Fish,Sea Trout,Shad 
-Shark
-Shrimp
-Snapper
-Sole
-Spanish Mackerel
-Squid 
-calamari 
-Swordfish
-Tilapia
-Tilefish 
-Tuna 
-Walleye 
-Weakfish
-White Croaker 
-Whitefish
-Whiting
-Anchovy
-Bass 
-Bluefish
-Buffalo Fish
-Butterfish
-Carp
-Catfish 
-Chilean sea bass
-Clam
-Cod
-Crab 
-Crayfish 
-Croaker 
-Flounder
-Golden Snapper
-Grouper
-Haddock
-Hake
-Halibut
-Herring 
-Jack 
-Jacksmelt
-King Mackerel
-Lobster 
-Mackerel 
-Mahi Mahi 
-Marlin
-Mullet
-Orange Roughy
-Oysters 
-Perch 
-Pickerel
-Plaice
-Pollock
-Pompano 
-Rainbow Trout]
+fish = [Sablefish,Salmon,Sardines ,Scallop,Scorpion Fish,Sea Trout,Shad,Shark,Shrimp,Snapper,Sole,Spanish Mackerel,Squid ,calamari ,Swordfish,Tilapia,Tilefish ,Tuna ,Walleye ,Weakfish,White Croaker ,Whitefish,Whiting,Anchovy,Bass ,Bluefish,Buffalo Fish,Butterfish,Carp,Catfish ,Chilean sea bass,Clam,Cod,Crab ,Crayfish ,Croaker ,Flounder,Golden Snapper,Grouper,Haddock,Hake,Halibut,Herring ,Jack ,Jacksmelt,King Mackerel,Lobster ,Mackerel .Mahi Mahi ,Marlin,Mullet,Orange Roughy,Oysters ,Perch ,Pickerel,Plaice,Pollock,Pompano ,Rainbow Trout]
 
 if ingiq == 1:
     ingcon = "\" + 
