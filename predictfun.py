@@ -47,7 +47,7 @@ if ingiq == 5:
 if ingiq == 6:
     ingcon = "Protein > 54"
 
-condition = str(ingcon + " and " + discon)
+condition = str(ingcon + " and " + discon)-
 
 set = df.query(condition)
 l = list(set["Recipe_name"])
