@@ -3,8 +3,9 @@ import random
 df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Model/Dataset/dummydataset.csv")
 
 valid = (1,2,3,4,5,6)
-ingiq = int(input("Enter the Ingredient in question:\n1. Meat\n2. Rice\n3. Milk\n4. Sugar\n5. Wheat\n6. Soy\nYour Answer: "))
-
+ingiq = int(input("Enter the Ingredient in question:\n1. Rice\n2. Milk\n3. Sugar\n4. Wheat\n5. Soy\nYour Answer: "))
+if ingiq == 1:
+    ingiq = ingiq+1
 if ingiq not in valid:
     print("ERROR: invalid response")
 
@@ -33,8 +34,8 @@ elif dis == 6:
 #conditions
 
 
-if ingiq == 1:
-    ingcon = "'Chicken' in Recipe_name" 
+# if ingiq == 1:
+#     ingcon = "'Chicken' in Recipe_name" 
 if ingiq == 2:
     ingcon = "Carbs < 59"
 if ingiq == 3:
@@ -54,4 +55,4 @@ if len(l) == 0:
     print("no, you cant eat this")
 else:
     ans = l[random.randint(0, len(l))]
-    print(ans)
+    print("yes, we reccomend you try", ans)
