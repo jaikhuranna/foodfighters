@@ -1,6 +1,6 @@
 import pandas as pd
 import random
-df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Model/Dataset/dummydataset.csv")
+df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Dataset/dummydataset.csv")
 
 valid = (1,2,3,4,5,6)
 ingiq = int(input("Enter the Ingredient in question:\n1. Rice\n2. Milk\n3. Sugar\n4. Wheat\n5. Soy\nYour Answer: "))
