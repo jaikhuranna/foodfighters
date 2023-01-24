@@ -1,18 +1,37 @@
 import pandas as pd
 import random
-df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Model/Dataset/dummydataset.csv")
-def mainfun():
+import json
+
+def jsontolist(a):
+    f = open(str(a))
+    l = json.load(f)
+    al = list(l.values())
+    al
+    for i in range(len(al)):
+        al[i] = int(al[i])
+    return al
+
+df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Dataset/dummydataset.csv")
+
+f = open('data.json')
+l = json.load(f)
+
+def mainfun(filename):
+    
+    al = jsontolist(filename)
+    
     valid = (1,2,3,4,5,6)
-    ingiq = int(input("Enter the Ingredient in question:\n1. Rice\n2. Milk\n3. Sugar\n4. Wheat\n5. Soy\nYour Answer: "))
+
+    ingiq = al[0]
+    dis = al[1]
+
     if ingiq == 1:
         ingiq = ingiq+1
-    if ingiq not in valid:
-    print("ERROR: invalid response")
-
-    dis = int(input("Enter the Disease\n1. obesity \n2. diabetes \n3. cardiovascular disease \n4. cancer \n5. dental disease \n6. osteoporosis\nYour answer: "))
-
+    
     if dis not in valid:
-    print("ERROR: invalid response")
+        print("ERROR: invalid response")
+    if ingiq not in valid:
+        print("ERROR: invalid response")
 
     # checking for diseases
 #conditions
@@ -49,7 +68,9 @@ def mainfun():
     set = df.query(condition)
     l = list(set["Recipe_name"])
     if len(l) == 0:
-        print("no, you cant eat this")
+        return 'no'
     else:
         ans = l[random.randint(0, len(l))]
-        print("yes, we reccomend you try", ans)
+        return ans
+
+print(mainfun('data.json'))
