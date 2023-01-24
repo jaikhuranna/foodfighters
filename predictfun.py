@@ -1,20 +1,62 @@
 import pandas as pd
-ds = pd.read_csv('/home/jaikhurana/Documents/Projects/foodfighters/Model/Dataset/dummydataset.csv')
+import random
+df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Model/Dataset/dummydataset.csv")
 
-ingiq = input("Enter the Ingredient in question: ")
-dis = int(input("1. obesity \n2. diabetes \n3. cardiovascular disease \n4. cancer \n5. dental disease \n6. osteoporosis\nYour answer: "))
 valid = (1,2,3,4,5,6)
+ingiq = int(input("Enter the Ingredient in question:\n1. Meat\n2. Rice\n3. Milk\n4. Sugar\n5. Wheat\n6. Soy\nYour Answer: "))
+
+if ingiq not in valid:
+    print("ERROR: invalid response")
+
+dis = int(input("Enter the Disease\n1. obesity \n2. diabetes \n3. cardiovascular disease \n4. cancer \n5. dental disease \n6. osteoporosis\nYour answer: "))
 
 if dis not in valid:
     print("ERROR: invalid response")
 
-df.query('Length > 7 and Width < 8')
+    # checking for diseases
+#conditions
+
+if dis == 1:
+    discon = "Fat < 50 and Carbs < 57"
+elif dis == 2:
+    discon = "Fat < 50 and Carbs < 57"
+elif dis == 3:
+    discon = "Fat < 50"
+elif dis == 4:
+    discon = "Protein > 50"
+elif dis == 5:
+    discon = "Carbs < 57 and Protein > 50"
+elif dis == 6:
+    discon = "Protein > 50"
+
+    #checking for ingredients in question
+#conditions
+
+if ingiq == 1:
+    ingcon = "Fat < 54 and Carbs < 59"
+if ingiq == 2:
+    ingcon = "Carbs < 59"
+if ingiq == 3:
+    ingcon = "Fat > 54"
+if ingiq == 4:
+    ingcon = "Carbs > 59"
+if ingiq == 5:
+    ingcon = "Carbs > 59"
+if ingiq == 6:
+    ingcon = "Protein > 54"
+
+condition = str(ingcon + " and " + discon)
+
+set = df.query(condition)
+l = list(set["Recipe_name"])
+ans = l[random.randint(0, len(l))]
+print(ans)
 
 """
-obesity- Low fat(33g-50g), low carbs(20g-57g)
-diabetes - Low fat(33g-50g), low carbs(20g-57g)
-cardiovascular disease - Low fat(33g-50g)
-cancer - 50-175g high protein
-dental disease - low carbs(20g-57g), high protein
-osteoporosis - high protein 
+Meat (chicken pork mutton fish beef lamb) 
+Rice high carbs
+Milk high fat
+Sugar high carbs
+Wheat high carbs
+Soy high protein
 """
