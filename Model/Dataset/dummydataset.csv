@@ -1,4 +1,4 @@
-Diet_type,Cuisine_type,Protein(g),Carbs(g),Fat(g),Calories (kcal),Recipe_name
+Diet_type,Cuisine_type,Protein,Carbs,Fat,Calories,Recipe_name
 10,10,5.22,1.29,3.2,54.84,Bone Broth From 'Nom Nom Paleo'
 10,10,30.91,302.59,96.76,2204.84,Paleo Pumpkin Pie
 10,10,30.03,275.88,97.68,2102.76,Paleo Pumpkin Pie recipes
