@@ -51,7 +51,7 @@ condition = str(ingcon + " and " + discon)
 set = df.query(condition)
 l = list(set["Recipe_name"])
 ans = l[random.randint(0, len(l))]
-if ans == ""
+if ans == "":
     print("haha")
 else:
     print(ans)
