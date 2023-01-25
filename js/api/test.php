@@ -13,6 +13,7 @@
             <br>
             <br>
             <br>
+        <p>How would you like die?<br>
             <select name="Diseases" required>
                 <option value=0>[Choose Your Condition]</option>
                 <option value=1>Obesity</option>
