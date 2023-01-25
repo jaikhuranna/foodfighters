@@ -55,4 +55,4 @@ if len(l) == 0:
     print("no, you cant eat this")
 else:
     ans = l[random.randint(0, len(l))]
-    print("yes, we reccomend you try", ans)
+    print("yes, we reccomend you try", ans + ".")
