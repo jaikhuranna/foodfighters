@@ -1,6 +1,7 @@
 import pandas as pd
 import random
 import json
+import sys
 
 def jsontolist(a):
     f = open(str(a))
@@ -11,7 +12,7 @@ def jsontolist(a):
         al[i] = int(al[i])
     return al
 
-df = pd.read_csv("/home/jaikhurana/Documents/Projects/foodfighters/Dataset/dummydataset.csv")
+df = pd.read_csv("/var/www/html/FoodFighters/api/foodfighters/Dataset/dummydataset.csv")
 
 f = open('data.json')
 l = json.load(f)
@@ -74,3 +75,4 @@ def mainfun(filename):
         return ans
 
 print(mainfun('data.json'))
+sys.modules[__name__] = mainfun
